@@ -53,4 +53,10 @@ html.has-pointer .pointer-light{opacity:1}
 @media(max-width:950px){.site-header .nav{flex-wrap:wrap}.site-header [data-theme-slot]{margin-left:auto}}
 @media(max-width:650px){.coming-head{flex-wrap:wrap}.coming-head-links{margin-left:auto}.coming-head-links [data-theme-slot]{display:block}.coming-logo{font-size:.9rem!important}.site-header .nav{flex-wrap:nowrap}.site-header [data-theme-slot]{margin-left:auto}.theme-btn{height:34px;min-width:34px;padding:0 7px}.palette-toggle .theme-label{display:none}.back-home{max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.coming-body h1{font-size:clamp(4.4rem,18vw,7rem)}.palette-menu{right:-2px}.coming-project-art img{object-position:center 42%}}
 @media(max-width:390px){.back-home{max-width:72px}.coming-logo span{max-width:150px;line-height:1.05;white-space:normal}}
+/* Keep the sticky navigation and its theme menu above cards while scrolling. */
+.site-header{z-index:100!important;isolation:isolate}
+.site-header .nav{overflow:visible}
+.site-header .theme-controls,.coming-head .theme-controls{z-index:101}
+.site-header .palette-menu,.coming-head .palette-menu{z-index:102}
+.coming-head{position:relative;z-index:100;isolation:isolate}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.is-reveal-ready [data-reveal]{opacity:1;transform:none}}
